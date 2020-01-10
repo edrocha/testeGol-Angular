@@ -1,0 +1,51 @@
+<app-theheader></app-theheader>
+<div class="card mt-3">
+    <div class="card-header">
+      <div class="float-left">
+        <h4>Listagem</h4>
+      </div>
+      <div class="float-right">
+        <button type="button" class="btn btn-primary" [routerLink]="['novo']">Cadastrar</button>
+        
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover"><!----*ngIf="(cursos$ | async) as cursos; else loading">-->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Lista de Aeronaves</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let curso of cursos">
+            <td>{{ airplane.airID }}</td>
+            <td>{{ airplane.airModelo}}</td>
+            <td>{{ airplane.airairQtdPassageiro}}</td>
+            <td>{{ airplane.airData}}</td>
+
+            <td>
+              <span class="float-right">
+                <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onEdit(airplane.id)">
+                  Atualizar
+                </button>
+  
+                <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(airplane.id)">
+                  Remover
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <ng-template #loading>
+        <span>Carregando Cursos...</span>
+      </ng-template>
+  
+     
+    </div>
+  </div>
+  
+   

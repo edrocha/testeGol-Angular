@@ -1,0 +1,46 @@
+<app-theheader></app-theheader>
+
+<form class="needs-validation" novalidate [formGroup]="form">
+    <div class="form-row">
+        <h3>Cadastro</h3>
+        <br>
+        <hr>
+        <div class="col-md-12">
+            <label for="nome">Modelo</label>
+            <input type="text" class="form-control" id="Modelo" value="" formControlName="modelo"
+            [ngClass]="{'is-invalid':submitted && form.get('airModelo').errors}">
+
+            <label for="nome">Qtd Passageiro</label>
+            <input type="text" class="form-control" id="qtd" value="" formControlName="qtdPassageiro"
+            [ngClass]="{'is-invalid':submitted && form.get('airQtdPassageiro').errors}">
+
+
+            <div class="invalid-feedback" *ngIf="form.get('qtdPassageiro').errors" >
+                por favor Informe a Quantidade de Passageiro
+            </div>
+
+
+            <label for="nome">Data</label>
+            <input type="text" class="form-control" id="data" value="" formControlName="data"
+            [ngClass]="{'is-invalid':submitted && form.get('airData').errors}">
+
+
+            <div class="invalid-feedback" *ngIf="form.get('data').errors" >
+                por favor Informe a Data
+            </div>
+
+
+        </div>
+
+    </div>
+<br>
+    <div>
+        <button type="submit" class="btn btn-primary" (click)="onSumit()">Salvar</button>
+        <button  class="btn btn-default" (click)="onDelete(airplane)">Cancelar</button>
+    </div>
+
+    
+<br><br>
+
+
+</form>

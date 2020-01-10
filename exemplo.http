@@ -1,0 +1,31 @@
+
+
+  http://localhost:3000/airplane
+
+###
+POST   http://localhost:3000/airplane HTTP/1.1
+content-type: application/json
+
+{
+  "airID" : 3,
+  "airModelo":"737",
+    "airQtdPassageiro": 350,
+    "airData":"02/02/2020"
+}
+
+###
+
+
+PUT   http://localhost:3000/airplane/2 HTTP/1.1
+content-type: application/json
+
+{
+   "airModelo":"737 - GOL",
+    "airQtdPassageiro": 350,
+    "airData":"02/02/2020"
+}
+
+
+###
+
+DELETE   http://localhost:3000/airplane/2 HTTP/1.1

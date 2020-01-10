@@ -1,0 +1,10 @@
+{
+  "airplane": [
+    {
+      "airID": 1,
+      "airModelo": "Boing 747 ",
+      "airQtdPassageiro": 300,
+      "airData": "01/01/2020"
+    }
+  ]
+}
